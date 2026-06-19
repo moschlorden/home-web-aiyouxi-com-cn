@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://moschlorden.github.io/home-web-aiyouxi-com-cn/sitemap.xml

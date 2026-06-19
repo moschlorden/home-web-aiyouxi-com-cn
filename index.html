@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 知识库索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f5f0;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #2e2b28;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            background-color: #fffcf8;
+            border-radius: 24px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+            padding: 2.8rem 2rem 3.2rem;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #b58968;
+            padding-left: 1.2rem;
+            margin-bottom: 0.6rem;
+            color: #3c3028;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7a6b5e;
+            margin-bottom: 2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e6ddd4;
+            padding-bottom: 1rem;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .dir-card {
+            background: #faf6f0;
+            border-radius: 18px;
+            padding: 1.6rem 1.5rem 1.5rem;
+            transition: background 0.15s, box-shadow 0.2s;
+            border: 1px solid #e7ddd2;
+        }
+
+        .dir-card:hover {
+            background: #f3ede5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .dir-card h3 {
+            font-size: 1.15rem;
+            font-weight: 580;
+            color: #4d3c30;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dir-card p {
+            font-size: 0.95rem;
+            color: #5d4f42;
+            margin-bottom: 0.2rem;
+        }
+
+        .dir-card .meta-tag {
+            display: inline-block;
+            background: #ddd2c5;
+            color: #3f332a;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.7rem;
+            border-radius: 30px;
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 560;
+            margin: 2rem 0 1rem 0;
+            color: #4a3b30;
+            border-bottom: 1px dashed #d9cec2;
+            padding-bottom: 0.4rem;
+        }
+
+        .intro-block {
+            background: #fcf9f5;
+            padding: 1.3rem 1.8rem;
+            border-radius: 20px;
+            margin: 1rem 0 1.8rem;
+            border: 1px solid #e9dfd4;
+        }
+
+        .intro-block p {
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+        }
+
+        .callout-box {
+            background: #efe8e0;
+            border-left: 5px solid #b58968;
+            padding: 1.2rem 1.6rem;
+            border-radius: 12px;
+            margin: 2rem 0 1.2rem;
+            font-size: 0.95rem;
+            color: #3b322b;
+        }
+
+        .callout-box strong {
+            font-weight: 600;
+            color: #2e231d;
+        }
+
+        .info-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.2rem 0 2rem;
+        }
+
+        .info-item {
+            background: #f8f2eb;
+            flex: 1 1 160px;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e2d6ca;
+        }
+
+        .info-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8b7a6a;
+        }
+
+        .info-item .value {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4f3d30;
+            margin-top: 0.15rem;
+        }
+
+        .faq-mini {
+            background: #fbf7f2;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 1.8rem 0 1.5rem;
+        }
+
+        .faq-mini dt {
+            font-weight: 560;
+            margin: 0.8rem 0 0.2rem;
+            color: #42362c;
+        }
+
+        .faq-mini dd {
+            margin-left: 0.2rem;
+            font-size: 0.93rem;
+            color: #5b4d40;
+            border-left: 2px solid #cec0b2;
+            padding-left: 0.9rem;
+        }
+
+        .sentence-link {
+            font-size: 1rem;
+            background: #f5eee6;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        .sentence-link a {
+            color: #6b4f38;
+            text-decoration: none;
+            font-weight: 520;
+            border-bottom: 1px dotted #b58968;
+        }
+
+        .sentence-link a:hover {
+            color: #3b281d;
+            border-bottom-color: #4d3c2c;
+        }
+
+        .link-unit {
+            margin-top: 0.8rem;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #a59585;
+            border-top: 1px solid #e0d5c8;
+            padding-top: 1.2rem;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            .directory-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 1rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1.2rem;
+            }
+            .info-area {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>📚 爱游戏 · 知识库</h1>
+    <div class="subhead">目录式索引 · 主题聚合 · 信息速查</div>
+
+    <!-- 目录布局卡片 -->
+    <div class="directory-grid">
+        <div class="dir-card">
+            <h3>🎲 游戏设计</h3>
+            <p>机制拆解 · 叙事结构 · 交互原型</p>
+            <span class="meta-tag">12 条目</span>
+        </div>
+        <div class="dir-card">
+            <h3>🕹️ 平台生态</h3>
+            <p>主机 · 移动 · 云游戏 · 跨平台趋势</p>
+            <span class="meta-tag">9 条目</span>
+        </div>
+        <div class="dir-card">
+            <h3>🧩 文化研究</h3>
+            <p>玩家社群 · 电子竞技 · 游戏化学习</p>
+            <span class="meta-tag">7 条目</span>
+        </div>
+        <div class="dir-card">
+            <h3>⚙️ 技术基础</h3>
+            <p>渲染管线 · 网络同步 · 物理引擎</p>
+            <span class="meta-tag">10 条目</span>
+        </div>
+    </div>
+
+    <!-- 介绍区（从主题内容展开） -->
+    <div class="intro-block">
+        <p><strong>爱游戏</strong> 是以游戏为核心的知识聚合入口。这里的“游戏”不止是娱乐——它涵盖设计思维、互动技术、赛事运营与创作文化。通过分类主题、关键概念与实用提示，帮助从业者、研究者和爱好者快速建立框架感。</p>
+        <p>知识库持续更新，现阶段聚焦国内独立游戏、移动端交互趋势及游戏化教育案例。每个板块下均附有简注与延伸阅读指引。</p>
+    </div>
+
+    <!-- 提示区 -->
+    <div class="callout-box">
+        <strong>💡 使用提示</strong><br>
+        将鼠标悬停于卡片上方可查看条目数。如需深入了解某个主题，可复制关键词在站内检索，或直接浏览 <a href="https://home-web-aiyouxi.com.cn" style="color:#5a4435;text-decoration:underline;">爱游戏</a> 的专栏文章索引。<br>
+        <span style="display: inline-block; margin-top: 0.5rem; background: #d8cbbd; border-radius: 30px; padding: 0.1rem 1rem; font-size: 0.8rem;">建议搭配桌面浏览器获得最佳目录体验</span>
+    </div>
+
+    <!-- 相关信息区 -->
+    <div class="section-title">📋 相关信息</div>
+    <div class="info-area">
+        <div class="info-item">
+            <div class="label">活跃主题</div>
+            <div class="value">程序生成 · 叙事设计</div>
+        </div>
+        <div class="info-item">
+            <div class="label">最新收录</div>
+            <div class="value">2025-03 · 游戏无障碍</div>
+        </div>
+        <div class="info-item">
+            <div class="label">内容形态</div>
+            <div class="value">笔记 · 导图 · 译文</div>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要（自然穿插） -->
+    <dl class="faq-mini">
+        <dt>❓ 知识库适合哪些人？</dt>
+        <dd>游戏策划、学生、独立开发者，以及对游戏机制感兴趣的玩家。内容以概念梳理和资源索引为主，不深入特定引擎操作。</dd>
+        <dt>❓ 如何快速定位某个知识点？</dt>
+        <dd>利用上方卡片目录缩小范围，或在 <a href="https://home-web-aiyouxi.com.cn" style="color:#5a4435;text-decoration:underline;">爱游戏</a> 页面内使用关键词搜索（部分页面支持模糊匹配）。</dd>
+        <dt>❓ 内容更新频率？</dt>
+        <dd>每月至少补充 2–3 个新条目，同时修订已有词条。重大行业事件会以短评形式追加。</dd>
+    </dl>
+
+    <!-- 自然嵌入链接的句子（严格符合 a 标签可见文本为「爱游戏」） -->
+    <div class="link-unit">
+        <span class="sentence-link">主题深度解读可参考 <a href="https://home-web-aiyouxi.com.cn">爱游戏</a> 的系列长文与术语表。</span>
+        <span style="margin-left: 1.2rem; font-size: 0.9rem; color: #846f5d;">—— 知识库版本 1.2</span>
+    </div>
+
+    <!-- 额外说明区（保持专业、克制） -->
+    <div style="margin-top: 1.8rem; font-size: 0.9rem; background: #f6efe7; border-radius: 16px; padding: 1rem 1.4rem; color: #4d3e32;">
+        <strong>📌 关于引用与转载</strong><br>
+        本索引仅提供结构化的摘要与链接，所有详细内容均指向 <a href="https://home-web-aiyouxi.com.cn" style="color:#5a4435;">爱游戏</a> 及其关联页面。引用时请注明原文出处。
+    </div>
+
+    <div class="footer-note">
+        <span>✎ 爱游戏 · 知识库  |  简洁专业  |  信息密度优先</span>
+    </div>
+</div>
+</body>
+</html>
