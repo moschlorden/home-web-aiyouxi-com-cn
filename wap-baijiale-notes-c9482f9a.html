@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百家乐 · 稳定入口与产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            line-height: 1.6;
+            color: #1e2025;
+        }
+
+        .wrapper {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0b0f1c 0%, #1a1f30 100%);
+            padding: 80px 0 64px;
+            text-align: center;
+            color: #eaeef2;
+            border-bottom: 4px solid #3f6b9c;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.4rem;
+            word-break: keep-all;
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #b0c4de;
+            max-width: 680px;
+            margin: 0 auto 0.5rem;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.5rem 1.6rem;
+            border: 1px solid #5879a3;
+            border-radius: 30px;
+            color: #cbdae9;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(4px);
+        }
+
+        /* 主要内容区 (浅色) */
+        .content {
+            background: #ffffff;
+            padding: 56px 0 64px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+        }
+
+        .intro-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .intro-text {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .intro-text h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #0f1a2b;
+            border-left: 6px solid #2b5797;
+            padding-left: 18px;
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+            color: #2d313a;
+        }
+
+        .intro-text p a {
+            color: #1f5090;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s, color 0.15s;
+        }
+
+        .intro-text p a:hover {
+            border-bottom-color: #1f5090;
+            color: #0a305a;
+        }
+
+        .highlight-card {
+            flex: 1.2;
+            min-width: 220px;
+            background: #f0f4fa;
+            border-radius: 20px;
+            padding: 28px 24px;
+            align-self: flex-start;
+            box-shadow: 0 8px 18px rgba(0, 20, 40, 0.06);
+        }
+
+        .highlight-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0f1f34;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-card ul {
+            list-style: none;
+        }
+
+        .highlight-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #dce3ed;
+            font-size: 0.98rem;
+            color: #1f2a3a;
+        }
+
+        .highlight-card li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-card li::before {
+            content: "▸";
+            color: #356aa0;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* 特点卡片区 */
+        .feature-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 48px 0 40px;
+        }
+
+        .feature-item {
+            background: #f9fbfd;
+            padding: 24px 18px;
+            border-radius: 16px;
+            border: 1px solid #e5eaf1;
+            transition: box-shadow 0.2s, transform 0.1s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 14px rgba(34, 60, 94, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .feature-item .icon {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .feature-item h4 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #111d2e;
+        }
+
+        .feature-item p {
+            font-size: 0.94rem;
+            color: #3e4654;
+        }
+
+        /* 使用建议 + 提示 (混合布局) */
+        .advice-box {
+            background: #edf2f9;
+            border-radius: 24px;
+            padding: 32px 30px;
+            margin-top: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            border-left: 5px solid #2b5797;
+        }
+
+        .advice-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .advice-col h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0f1f30;
+            margin-bottom: 12px;
+        }
+
+        .advice-col p, .advice-col li {
+            font-size: 0.97rem;
+            color: #1f2a3b;
+            line-height: 1.7;
+        }
+
+        .advice-col ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .faq-mini {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #d8e0ea;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: #0b1a2b;
+        }
+
+        .faq-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 40px;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+            background: #fafcff;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid #e3e9f1;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-size: 0.98rem;
+            color: #1a2f47;
+            margin-bottom: 4px;
+        }
+
+        .faq-item span {
+            font-size: 0.92rem;
+            color: #3f4b5c;
+        }
+
+        .footer-note {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #6b788b;
+            border-top: 1px solid #e5e9f0;
+            padding-top: 28px;
+        }
+
+        .footer-note a {
+            color: #1f5090;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .sub { font-size: 1rem; }
+            .intro-text h2 { font-size: 1.5rem; }
+            .wrapper { padding: 0 18px; }
+            .advice-box { padding: 24px 18px; flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="wrapper">
+            <h1>百家乐 · 稳定入口</h1>
+            <div class="sub">聚焦界面 · 克制说明 · 信息直达</div>
+            <div class="tagline">产品说明式摘要 · 持续可用的访问节点</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+
+            <!-- 摘要 + 亮点卡片 -->
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>关于百家乐</h2>
+                    <p>「<a href="https://wap--baijiale.com">百家乐</a>」页面定位于提供稳定、直接的移动端访问路径。该入口不叠加冗余跳转，保持页面的轻量与基础可用性，适用于需要快速打开、浏览基本信息的场景。</p>
+                    <p>从界面结构上看，其以功能优先，避免过度装饰，让用户注意力集中于内容本身。同时亦保留了必要的导航提示与基础交互元素，整体体验紧凑、明确。</p>
+                    <p>该入口面向对效率与可靠性有一定要求的用户，旨在减少不确定的加载等待与复杂的操作流程。你所看到的，即是可用的界面。</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>⏺ 亮点速览</h3>
+                    <ul>
+                        <li>轻量级页面结构</li>
+                        <li>移动优先适配</li>
+                        <li>低跳转直达内容</li>
+                        <li>基础信息完整呈现</li>
+                        <li>稳定的访问节点</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特点卡片 (产品说明) -->
+            <div class="feature-section">
+                <div class="feature-item">
+                    <span class="icon">📱</span>
+                    <h4>移动端适配</h4>
+                    <p>页面针对手机与平板屏幕优化，文字与控件自动缩放，减少手动调整。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🧩</span>
+                    <h4>模块化布局</h4>
+                    <p>功能区块清晰划分，用户可快速定位需要的信息或操作区域。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">⚡</span>
+                    <h4>低冗余加载</h4>
+                    <p>核心资源内嵌，外部依赖极少，打开速度相对稳定。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🔐</span>
+                    <h4>基础访问保障</h4>
+                    <p>入口不引入额外重定向，保持链接可用性与透明度。</p>
+                </div>
+            </div>
+
+            <!-- 使用建议 + 可信说明 (混合) -->
+            <div class="advice-box">
+                <div class="advice-col">
+                    <h3>📌 使用建议</h3>
+                    <ul>
+                        <li>推荐在主流浏览器中打开，以获得完整样式呈现</li>
+                        <li>如加载异常可稍后重试，避免频繁刷新</li>
+                        <li>页面不含自动播放媒体及弹窗，可放心浏览</li>
+                    </ul>
+                </div>
+                <div class="advice-col">
+                    <h3>📋 可信但克制</h3>
+                    <p>本页仅展示入口与客观说明，不涉及引导性表述或保证。所有功能基于页面实际结构描述。请根据自身判断与需求使用。</p>
+                    <p style="margin-top: 10px;">链接 <a href="https://wap--baijiale.com">百家乐</a> 指向其主页面，内容与表现以实际访问为准。</p>
+                </div>
+            </div>
+
+            <!-- FAQ 摘要 -->
+            <div class="faq-mini">
+                <h3>❓ 常见疑问摘要</h3>
+                <div class="faq-row">
+                    <div class="faq-item">
+                        <strong>页面是否持续可用？</strong>
+                        <span>该入口保持基础维护，但无法保证100%无间断，建议以实际状态为准。</span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>需要注册或登录吗？</strong>
+                        <span>页面本身不强制要求身份验证，部分功能可能涉及交互场景。</span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>内容会频繁变动吗？</strong>
+                        <span>页面结构相对稳定，核心信息更新频率较低。</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                <p>产品说明页面 · 基于稳定入口描述 · 访问 <a href="https://wap--baijiale.com">百家乐</a> 以获取最新界面</p>
+                <p style="margin-top: 6px; opacity: 0.65;">本页仅作客观展示，不构成任何建议或承诺。</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
